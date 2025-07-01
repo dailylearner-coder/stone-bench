@@ -530,8 +530,9 @@ function App() {
           <span className="text-2xl font-bold">Stone Bench</span>
         </div>
         <div className="text-center text-gray-300 text-sm md:text-base mb-2">
-          Your trusted local financial partner.
-          &nbsp;|&nbsp; &copy; 2025 Stone Bench. All rights reserved.
+          <span className="block md:inline">Your trusted local financial partner.</span>
+          <span className="block md:inline">&nbsp;|&nbsp;</span>
+          <span className="block md:inline">&copy; 2025 Stone Bench. All rights reserved.</span>
         </div>
         <div className="flex gap-3 mt-1 justify-center">
           <span className="rounded-full bg-white/10 p-2 hover:bg-blue-100/20 transition-colors cursor-pointer">
