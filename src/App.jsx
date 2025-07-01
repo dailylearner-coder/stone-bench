@@ -524,20 +524,25 @@ function App() {
 
   const Footer = () => (
     <footer className="bg-gray-900 text-white py-4">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-2 w-full">
-          <span className="flex items-center text-xl font-bold text-center">
-            <img src={logo} alt="Stone Bench Logo" className="h-7 w-7 mr-2 inline-block align-middle rounded-full bg-white/80 opacity-80 object-cover aspect-square" />
-            Stone Bench &nbsp;|&nbsp; Your trusted local partner in stock market, insurance, real estate, and financial growth.
-          </span>
-          <span className="flex items-center gap-3 mt-2 md:mt-0">
-            <Facebook className="h-5 w-5 hover:text-blue-400 cursor-pointer" />
-            <Twitter className="h-5 w-5 hover:text-blue-400 cursor-pointer" />
-            <Linkedin className="h-5 w-5 hover:text-blue-400 cursor-pointer" />
-          </span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+        <div className="flex items-center justify-center mb-1">
+          <img src={logo} alt="Stone Bench Logo" className="h-8 w-8 rounded-full bg-white/80 opacity-80 object-cover aspect-square mr-2" />
+          <span className="text-2xl font-bold">Stone Bench</span>
         </div>
-        <div className="border-t border-gray-800 mt-6 pt-4 text-center text-gray-400">
-          <p>&copy; 2025 Stone Bench. All rights reserved. Branches in Pollachi, Udumalpet, and Coimbatore, Tamil Nadu.</p>
+        <div className="text-center text-gray-300 text-sm md:text-base mb-2">
+          Your trusted local financial partner.
+          &nbsp;|&nbsp; &copy; 2025 Stone Bench. All rights reserved.
+        </div>
+        <div className="flex gap-3 mt-1 justify-center">
+          <span className="rounded-full bg-white/10 p-2 hover:bg-blue-100/20 transition-colors cursor-pointer">
+            <Facebook className="h-5 w-5 text-white" />
+          </span>
+          <span className="rounded-full bg-white/10 p-2 hover:bg-blue-100/20 transition-colors cursor-pointer">
+            <Twitter className="h-5 w-5 text-white" />
+          </span>
+          <span className="rounded-full bg-white/10 p-2 hover:bg-blue-100/20 transition-colors cursor-pointer">
+            <Linkedin className="h-5 w-5 text-white" />
+          </span>
         </div>
       </div>
     </footer>
