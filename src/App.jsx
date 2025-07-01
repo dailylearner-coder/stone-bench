@@ -2,16 +2,17 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
-import { TrendingUp, Shield, Users, BarChart3, Phone, Mail, MapPin, Star, ArrowRight, CheckCircle, Menu, X } from 'lucide-react'
+import { TrendingUp, Shield, Users, BarChart3, Phone, Mail, MapPin, Star, ArrowRight, CheckCircle, Menu, X, Facebook, Twitter, Linkedin, Info } from 'lucide-react'
+import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/ui/tooltip'
 import './App.css'
 import heroBg from './assets/hero-bg.jpg'
 import chartsBg from './assets/charts-bg.png'
-import professionalBg from './assets/professional-bg.jpg'
-import indianStockBg from './assets/indian-stock-bg.jpg'
+import visionImg from './assets/vision.png'
 import kumarImg from './assets/kumar.jpg'
 import rajivImg from './assets/rajiv.jpg'
 import logo from './assets/logo.jpeg'
 import logoExtension from './assets/Logo extension.jpeg'
+import indianStockBg from './assets/indian-stock-bg.jpg'
 
 function App() {
   const [activeTab, setActiveTab] = useState('home')
@@ -43,11 +44,17 @@ function App() {
       features: ["Vehicle insurance", "Health insurance", "Term insurance"]
     },
     {
+      icon: <Star className="h-8 w-8 text-yellow-500" />,
+      title: "Tax Planning",
+      description: "Optimize your tax savings and ensure compliance with expert guidance.",
+      features: ["Personal & business tax planning", "Tax-saving investment options", "Regulatory compliance"]
+    },
+    {
       icon: <BarChart3 className="h-8 w-8 text-pink-600" />,
       title: "Real Estate",
       description: "Assistance with buying, selling, and investing in real estate.",
       features: ["Property advisory", "Local expertise", "Transparent process"]
-    }
+    },
   ]
 
   const testimonials = [
@@ -106,7 +113,7 @@ function App() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
-              <img src={logo} alt="Stone Bench Logo" className="h-12 w-12 bg-white p-1 rounded-full shadow-md border border-gray-200" />
+              <img src={logo} alt="Stone Bench Logo" className="h-12 w-12 bg-white p-1 rounded-full shadow-md border border-gray-200 object-cover aspect-square" />
               <span className="ml-2 text-2xl font-bold text-gray-900">Stone Bench</span>
             </div>
           </div>
@@ -294,12 +301,30 @@ function App() {
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
-              <CardHeader>
+            <Card key={index} className="hover:shadow-lg transition-shadow relative">
+              <CardHeader className="relative">
                 <div className="flex items-center justify-center w-16 h-16 bg-gray-100 rounded-lg mb-4">
                   {service.icon}
                 </div>
-                <CardTitle>{service.title}</CardTitle>
+                <CardTitle className="flex items-center justify-between">
+                  {service.title}
+                  {service.title === 'Insurance Services' && (
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <a
+                          href="/Fortune Guarantee Plus-157.pdf"
+                          download
+                          className="absolute top-2 right-2 p-1 rounded-full bg-white/80 hover:bg-blue-50 transition-colors shadow-sm"
+                          aria-label="Download Insurance Details"
+                          style={{ zIndex: 10 }}
+                        >
+                          <Info className="h-6 w-6 text-blue-500 hover:text-blue-700 cursor-pointer transition-colors" />
+                        </a>
+                      </TooltipTrigger>
+                      <TooltipContent>Download Insurance Details</TooltipContent>
+                    </Tooltip>
+                  )}
+                </CardTitle>
                 <CardDescription>{service.description}</CardDescription>
               </CardHeader>
               <CardContent>
@@ -395,36 +420,44 @@ function App() {
     <div className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">About Stone Bench</h2>
-            <p className="text-lg text-gray-600 mb-6">
-              Founded in 2020, Stone Bench is a local stock market, insurance, and real estate partner for Coimbatore and surrounding areas. We are a small, dedicated team passionate about helping our community grow wealth and secure their future.
+          <div className="flex flex-col justify-center h-full">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center lg:text-left">
+              <span role="img" aria-label="chart">📈</span> About Stone Bench
+            </h2>
+            <p className="text-lg text-gray-600 mb-4 text-center lg:text-left">
+              <span className="font-semibold">Stone Bench</span> is your trusted financial partner for stock market, insurance, and real estate solutions in Coimbatore, Pollachi, and Udumalpet. What started as a local initiative in Udumalpet over 8 years ago has steadily grown — first to Pollachi, and now proudly serving clients in Coimbatore.
             </p>
-            <p className="text-lg text-gray-600 mb-6">
-              Our mission is to empower local investors and families with honest advice, research, and support tailored to your needs. We focus on transparency, personal relationships, and steady growth for every client.
+            <p className="text-lg text-gray-600 mb-4 text-center lg:text-left">
+              Our journey has been driven by consistency, integrity, and word-of-mouth trust. Today, we serve a growing community of clients who rely on us for transparent wealth management and long-term financial planning.
             </p>
-            <div className="grid grid-cols-2 gap-6 mb-8">
-              <div className="flex items-center">
-                <Users className="h-8 w-8 text-green-600 mr-3" />
-                <div>
-                  <div className="font-semibold">Local Team</div>
-                  <div className="text-sm text-gray-500">Based in Coimbatore</div>
-                </div>
-              </div>
-              <div className="flex items-center">
-                <TrendingUp className="h-8 w-8 text-blue-600 mr-3" />
-                <div>
-                  <div className="font-semibold">Growing Together</div>
-                  <div className="text-sm text-gray-500">Client-first approach</div>
-                </div>
-              </div>
-            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-3 text-center lg:text-left">
+              <span role="img" aria-label="target">🎯</span> Our Mission
+            </h3>
+            <p className="text-lg text-gray-600 mb-4 text-center lg:text-left">
+              To empower individuals and families with research-backed investment strategies, honest guidance, and reliable support — always tailored to your goals.
+            </p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-3 text-center lg:text-left">
+              <span role="img" aria-label="lightbulb">💡</span> Why Choose Stone Bench?
+            </h3>
+            <ul className="mb-6 space-y-2 text-gray-700 text-base text-center lg:text-left">
+              <li><span className="font-semibold">Local Expertise</span><br />Deep roots in your region, with a strong understanding of local financial needs.</li>
+              <li><span className="font-semibold">Client-First Approach</span><br />Personalized service, open communication, and honest advice — every step of the way.</li>
+              <li><span className="font-semibold">Steady, Sustainable Growth</span><br />Strategies built for long-term success, not short-term hype.</li>
+            </ul>
+            <p className="text-lg text-gray-600 text-center lg:text-left">
+              Whether you're just starting your financial journey or looking for reliable, long-term guidance — <span className="font-semibold">Stone Bench</span> is here to help you grow with confidence.
+            </p>
           </div>
-          <div>
+          <div className="flex flex-col items-center justify-center mt-8 gap-6">
             <img
               src={logoExtension}
               alt="Stone Bench Extended Logo"
-              className="rounded-lg shadow-lg"
+              className="rounded-lg shadow-lg w-full max-w-[480px] h-auto object-contain p-4 bg-white"
+            />
+            <img
+              src={visionImg}
+              alt="Stone Bench vision and mission illustration"
+              className="rounded-lg shadow-lg w-full max-w-[480px] h-auto object-cover p-4 bg-white"
             />
           </div>
         </div>
@@ -490,50 +523,21 @@ function App() {
   )
 
   const Footer = () => (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 text-white py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div>
-            <div className="flex items-center mb-4">
-              <img src={logo} alt="Stone Bench Logo" className="h-8 w-8" />
-              <span className="ml-2 text-xl font-bold">Stone Bench</span>
-            </div>
-            <p className="text-gray-400">
-              Your trusted local partner in stock market, insurance, real estate, and financial growth.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>Stock Trading</li>
-              <li>Portfolio Management</li>
-              <li>Research & Analysis</li>
-              <li>Insurance (Vehicle, Health, Term)</li>
-              <li>Real Estate</li>
-              <li>Investment Advisory</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>About Us</li>
-              <li>Careers</li>
-              <li>Press</li>
-              <li>Legal</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Branches</h3>
-            <ul className="space-y-2 text-gray-400 text-sm">
-              <li><span className="font-semibold">Pollachi:</span> 83/14 1st Floor, Angel Broking, Vallar Street, Bus Stand Back Side, Pollachi - 642001</li>
-              <li><span className="font-semibold">Udumalpet:</span> 8/9 2nd Floor, Angel Broking, 100 Feet Road, Abirami Nagar, Udumalpet - 642126</li>
-              <li><span className="font-semibold">Coimbatore:</span> No 1209/2, Sai Imperia Grand, Mettupalayam Road, Saibaba Colony, Coimbatore, Tamil Nadu - 641011</li>
-              <li><span className="font-semibold">Phone:</span> 8248276830</li>
-            </ul>
-          </div>
+        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-2 w-full">
+          <span className="flex items-center text-xl font-bold text-center">
+            <img src={logo} alt="Stone Bench Logo" className="h-7 w-7 mr-2 inline-block align-middle rounded-full bg-white/80 opacity-80 object-cover aspect-square" />
+            Stone Bench &nbsp;|&nbsp; Your trusted local partner in stock market, insurance, real estate, and financial growth.
+          </span>
+          <span className="flex items-center gap-3 mt-2 md:mt-0">
+            <Facebook className="h-5 w-5 hover:text-blue-400 cursor-pointer" />
+            <Twitter className="h-5 w-5 hover:text-blue-400 cursor-pointer" />
+            <Linkedin className="h-5 w-5 hover:text-blue-400 cursor-pointer" />
+          </span>
         </div>
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Stone Bench. All rights reserved. Branches in Pollachi, Udumalpet, and Coimbatore, Tamil Nadu.</p>
+        <div className="border-t border-gray-800 mt-6 pt-4 text-center text-gray-400">
+          <p>&copy; 2025 Stone Bench. All rights reserved. Branches in Pollachi, Udumalpet, and Coimbatore, Tamil Nadu.</p>
         </div>
       </div>
     </footer>
