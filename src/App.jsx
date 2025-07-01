@@ -531,7 +531,7 @@ function App() {
         </div>
         <div className="text-center text-gray-300 text-sm md:text-base mb-2">
           <span className="block md:inline">Your trusted local financial partner.</span>
-          <span className="block md:inline">&nbsp;|&nbsp;</span>
+          <span className="hidden md:inline">&nbsp;|&nbsp;</span>
           <span className="block md:inline">&copy; 2025 Stone Bench. All rights reserved.</span>
         </div>
         <div className="flex gap-3 mt-1 justify-center">
