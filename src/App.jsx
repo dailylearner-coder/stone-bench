@@ -106,7 +106,7 @@ function App() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
-              <img src={logo} alt="Stone Bench Logo" className="h-8 w-8" />
+              <img src={logo} alt="Stone Bench Logo" className="h-12 w-12 bg-white p-1 rounded-full shadow-md border border-gray-200" />
               <span className="ml-2 text-2xl font-bold text-gray-900">Stone Bench</span>
             </div>
           </div>
@@ -267,11 +267,11 @@ function App() {
             <div className="text-gray-600">Assets Managed</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-green-600">5</div>
+            <div className="text-3xl font-bold text-green-600">8+</div>
             <div className="text-gray-600">Years in Business</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-purple-600">30+</div>
+            <div className="text-3xl font-bold text-purple-600">100+</div>
             <div className="text-gray-600">Clients</div>
           </div>
           <div>
@@ -419,26 +419,6 @@ function App() {
                 </div>
               </div>
             </div>
-            {/* Founders Section */}
-            <div className="mt-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Founders</h3>
-              <div className="flex flex-col sm:flex-row gap-8">
-                <div className="flex flex-col items-center bg-gray-50 rounded-lg shadow p-6 w-full sm:w-1/2">
-                  <div className="flex justify-center items-center w-32 h-32 mb-4">
-                    <img src={kumarImg} alt="Kumar" className="w-32 h-32 object-cover object-center rounded-full border-4 border-blue-100 shadow" />
-                  </div>
-                  <div className="text-xl font-semibold text-gray-900">Kumar</div>
-                  <div className="text-gray-500 text-sm mt-1">Co-Founder</div>
-                </div>
-                <div className="flex flex-col items-center bg-gray-50 rounded-lg shadow p-6 w-full sm:w-1/2">
-                  <div className="flex justify-center items-center w-32 h-32 mb-4">
-                    <img src={rajivImg} alt="Rajiv" className="w-32 h-32 object-cover object-center rounded-full border-4 border-blue-100 shadow" />
-                  </div>
-                  <div className="text-xl font-semibold text-gray-900">Rajiv</div>
-                  <div className="text-gray-500 text-sm mt-1">Co-Founder</div>
-                </div>
-              </div>
-            </div>
           </div>
           <div>
             <img
@@ -464,7 +444,7 @@ function App() {
             <CardContent className="pt-6">
               <Phone className="h-12 w-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-lg font-semibold mb-2">Phone</h3>
-              <p className="text-gray-600">+91 98765 43210</p>
+              <p className="text-gray-600">+91 8248276830</p>
               <p className="text-sm text-gray-500">Mon-Fri 9AM-6PM IST</p>
             </CardContent>
           </Card>
