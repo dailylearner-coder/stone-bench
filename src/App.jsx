@@ -368,7 +368,7 @@ function App() {
                 <CardDescription>{plan.description}</CardDescription>
                 <div className="flex items-baseline">
                   <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                  <span className="text-gray-500">{plan.period}</span>
+                  <span className="text-gray-500 ml-2">{plan.period}</span>
                 </div>
               </CardHeader>
               <CardContent>
@@ -452,16 +452,36 @@ function App() {
             <CardContent className="pt-6">
               <Mail className="h-12 w-12 text-green-600 mx-auto mb-4" />
               <h3 className="text-lg font-semibold mb-2">Email</h3>
-              <p className="text-gray-600">contact@stonebench.in</p>
+              <p className="text-gray-600">stonebenchinvestments@gmail.com</p>
               <p className="text-sm text-gray-500">We reply within 1 business day</p>
             </CardContent>
           </Card>
           <Card className="text-center hover:shadow-lg transition-shadow">
             <CardContent className="pt-6">
               <MapPin className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Office</h3>
-              <p className="text-gray-600">201, Lakshmi Complex</p>
-              <p className="text-gray-600">Gandhipuram, Coimbatore 641012</p>
+              <h3 className="text-lg font-semibold mb-2">Our Branches</h3>
+              <div className="text-gray-600 text-sm space-y-3">
+                <div>
+                  <span className="font-semibold">Pollachi:</span><br />
+                  83/14 1st Floor, Angel Broking,<br />
+                  Vallar Street, Bus Stand Back Side,<br />
+                  Pollachi - 642001<br />
+                  <span className="">8248276830</span>
+                </div>
+                <div>
+                  <span className="font-semibold">Udumalpet:</span><br />
+                  8/9 2nd Floor, Angel Broking,<br />
+                  100 Feet Road, Abirami Nagar,<br />
+                  Udumalpet - 642126<br />
+                  <span className="">8248276830</span>
+                </div>
+                <div>
+                  <span className="font-semibold">Coimbatore:</span><br />
+                  No 1209/2, Sai Imperia Grand,<br />
+                  Mettupalayam Road, Saibaba Colony,<br />
+                  Coimbatore, Tamil Nadu - 641011
+                </div>
+              </div>
             </CardContent>
           </Card>
         </div>
@@ -503,17 +523,17 @@ function App() {
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-4">Support</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>Help Center</li>
-              <li>Contact Us</li>
-              <li>Security</li>
-              <li>Privacy Policy</li>
+            <h3 className="text-lg font-semibold mb-4">Branches</h3>
+            <ul className="space-y-2 text-gray-400 text-sm">
+              <li><span className="font-semibold">Pollachi:</span> 83/14 1st Floor, Angel Broking, Vallar Street, Bus Stand Back Side, Pollachi - 642001</li>
+              <li><span className="font-semibold">Udumalpet:</span> 8/9 2nd Floor, Angel Broking, 100 Feet Road, Abirami Nagar, Udumalpet - 642126</li>
+              <li><span className="font-semibold">Coimbatore:</span> No 1209/2, Sai Imperia Grand, Mettupalayam Road, Saibaba Colony, Coimbatore, Tamil Nadu - 641011</li>
+              <li><span className="font-semibold">Phone:</span> 8248276830</li>
             </ul>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Stone Bench. All rights reserved. Based in Coimbatore, Tamil Nadu.</p>
+          <p>&copy; 2024 Stone Bench. All rights reserved. Branches in Pollachi, Udumalpet, and Coimbatore, Tamil Nadu.</p>
         </div>
       </div>
     </footer>
