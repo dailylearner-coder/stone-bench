@@ -7,10 +7,11 @@ import './App.css'
 import heroBg from './assets/hero-bg.jpg'
 import chartsBg from './assets/charts-bg.png'
 import professionalBg from './assets/professional-bg.jpg'
-import stoneBenchLogo from './assets/stone-bench-logo.png'
 import indianStockBg from './assets/indian-stock-bg.jpg'
 import kumarImg from './assets/kumar.jpg'
 import rajivImg from './assets/rajiv.jpg'
+import logo from './assets/logo.jpeg'
+import logoExtension from './assets/Logo extension.jpeg'
 
 function App() {
   const [activeTab, setActiveTab] = useState('home')
@@ -105,7 +106,7 @@ function App() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
-              <img src={stoneBenchLogo} alt="Stone Bench Logo" className="h-8 w-8" />
+              <img src={logo} alt="Stone Bench Logo" className="h-8 w-8" />
               <span className="ml-2 text-2xl font-bold text-gray-900">Stone Bench</span>
             </div>
           </div>
@@ -441,8 +442,8 @@ function App() {
           </div>
           <div>
             <img
-              src={professionalBg}
-              alt="Professional team"
+              src={logoExtension}
+              alt="Stone Bench Extended Logo"
               className="rounded-lg shadow-lg"
             />
           </div>
@@ -494,7 +495,7 @@ function App() {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <img src={stoneBenchLogo} alt="Stone Bench Logo" className="h-8 w-8" />
+              <img src={logo} alt="Stone Bench Logo" className="h-8 w-8" />
               <span className="ml-2 text-xl font-bold">Stone Bench</span>
             </div>
             <p className="text-gray-400">
